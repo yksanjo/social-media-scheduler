@@ -1,86 +1,84 @@
-# SocialQueue 📱
+# social-media-scheduler
 
-> **Social Media Post Scheduler** - Schedule and post to multiple social media platforms (Twitter, LinkedIn, Mastodon) from one place. Perfect for content creators and marketers.
+## Detailed Description
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/yksanjo/SocialQueue)
-[![GitHub stars](https://img.shields.io/github/stars/yksanjo/SocialQueue?style=social)](https://github.com/yksanjo/SocialQueue)
+social-media-scheduler is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-**SocialQueue** simplifies social media management by letting you schedule posts across multiple platforms from one tool. Save time, maintain consistency, and grow your audience with automated posting.
+## Problem Statement
 
-## Features
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-- 🐦 Twitter/X posting
-- 💼 LinkedIn posting
-- 🐘 Mastodon posting
-- 📅 Schedule posts in advance
-- 📊 Post analytics
-- 🔄 Recurring posts
-- 📝 Post templates
+## Solution Overview
 
-## Installation
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
-```bash
-pip install -r requirements.txt
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
 ```
 
-## Configuration
+## Getting Started
 
-Create a `.env` file:
+### Prerequisites
 
-```env
-# Twitter/X API
-TWITTER_API_KEY=your_api_key
-TWITTER_API_SECRET=your_api_secret
-TWITTER_ACCESS_TOKEN=your_access_token
-TWITTER_ACCESS_TOKEN_SECRET=your_token_secret
+- Git
+- Project runtime/toolchain for this repo
 
-# LinkedIn API
-LINKEDIN_CLIENT_ID=your_client_id
-LINKEDIN_CLIENT_SECRET=your_client_secret
-LINKEDIN_ACCESS_TOKEN=your_access_token
+### Local Setup
 
-# Mastodon
-MASTODON_INSTANCE=https://mastodon.social
-MASTODON_ACCESS_TOKEN=your_access_token
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt  # or: pip install -e .[dev]
+pytest
 ```
 
 ## Usage
 
-### Schedule a Post
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-```bash
-python scheduler.py --post "Hello world!" --platforms twitter,linkedin --schedule "2024-01-15 10:00"
-```
+## Quality Standards
 
-### Post Immediately
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-```bash
-python scheduler.py --post "Hello world!" --platforms twitter,linkedin --now
-```
+## Security
 
-### List Scheduled Posts
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-```bash
-python scheduler.py --list
-```
+## Contributing
 
-### Cancel Scheduled Post
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
 
-```bash
-python scheduler.py --cancel post_id
-```
+## Roadmap
 
-## Supported Platforms
+Track upcoming milestones, technical debt, and planned feature work.
 
-- Twitter/X
-- LinkedIn
-- Mastodon
-- (More coming soon)
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT License
-
-
+This project is released under the MIT License.
